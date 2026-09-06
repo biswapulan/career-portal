@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Frontend Developer Intern — Student Corner × BPUT Notes</title>
+<meta name="description" content="Apply for the Frontend Developer Intern role — a paid internship from Student Corner and BPUT Notes.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0IiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzI1NjNlYiI+PC9yZWN0PjxwYXRoIGQ9Ik0xOCA0NlYxOGgxNWMzLjUgMCA2LjIuOSA4IDIuNyAxLjggMS43IDIuNyAzLjggMi43IDYuMyAwIDEuNy0uNSAzLjItMS41IDQuNC0uOSAxLjEtMiAxLjgtMy4yIDIuMiAxLjcuMyAzIDEuMiA0IDIuNSAxIDEuMyAxLjUgMi45IDEuNSA0LjggMCAyLjktMSA1LjEtMyA2LjctMiAxLjYtNC44IDIuNC04LjUgMi40SDE4em02LjItMTdoOC4zYzEuOSAwIDMuMy0uNSA0LjItMS4zLjktLjggMS40LTEuOSAxLjQtMy4yIDAtMS40LS41LTIuNS0xLjQtMy4yLS45LS44LTIuMy0xLjItNC4xLTEuMmgtOC40djguOXptMCAxMmg5LjJjMiAwIDMuNS0uNSA0LjUtMS41IDEtLjkgMS41LTIuMiAxLjUtMy43cy0uNS0yLjgtMS41LTMuN2MtMS0xLTIuNS0xLjQtNC41LTEuNGgtOS4ydjEwLjN6IiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPjwvc3ZnPg==">
+<style>
+/* Local system font stack inspired by the clean sans-serif typography used in modern chat interfaces */
+</style>
+<style>
+  :root{
+    --navy-900:#0a1330;
+    --navy-700:#132a63;
+    --blue:#2f5fe8;
+    --blue-500:#4f7bf0;
+    --blue-300:#8fabf7;
+    --paper:#f8f9fc;
+    --card:#ffffff;
+    --ink:#12131a;
+    --ink-soft:#666a78;
+    --line:#e3e5ee;
+    --red:#ee4130;
+    --success:#1a8354;
+    --danger:#d8372a;
+    --radius-lg:22px;
+    --radius-md:14px;
+    --radius-sm:8px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+    transition:background .5s ease;
+  }
+  body.on-landing{
+    background:radial-gradient(140% 120% at 85% 0%, #5d7ce6 0%, #243d7a 46%, #101b3e 100%);
+  }
+
+  img,svg{display:block;}
+
+  /* ---------- Topbar ---------- */
+  .topbar-wrap{
+    position:sticky;
+    top:0;
+    z-index:20;
+    display:flex;
+    justify-content:center;
+    padding:16px 14px 0;
+  }
+  .topbar{
+    width:100%;
+    max-width:640px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    background:var(--card);
+    border-radius:60px;
+    padding:8px 8px 8px 18px;
+    box-shadow:0 8px 24px rgba(10,19,48,0.16);
+  }
+  .brand-cluster{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:0;
+  }
+  .brand-cluster img{ height:40px; width:auto; max-width:130px; object-fit:contain; }
+  .brand-x{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+  }
+  .brand-cluster .bput-mark{ height:40px; width:40px; border-radius:6px; flex-shrink:0; }
+  .brand-cluster .bput-mark rect{ fill:var(--blue); }
+  .topbar .tag{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    font-size:0.68rem;
+    letter-spacing:0.03em;
+    color:var(--ink-soft);
+    background:var(--paper);
+    padding:8px 14px;
+    border-radius:40px;
+    white-space:nowrap;
+  }
+
+  /* ---------- Stage ---------- */
+  .stage-outer{
+    display:flex;
+    justify-content:center;
+    padding:0 16px 90px;
+  }
+  .stage{
+    width:100%;
+    max-width:600px;
+    padding-top:8px;
+  }
+
+  /* ---------- Landing / job posting ---------- */
+  .hero{
+    padding:26px 4px 6px;
+    color:#fff;
+  }
+  .eyebrow-script{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:600;
+    font-size:1.5rem;
+    color:var(--blue-300);
+    margin:0 0 6px;
+  }
+  .hero h1{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:800;
+    font-size:2.3rem;
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    margin:0 0 14px;
+    max-width:11ch;
+  }
+  .hero .sub{
+    font-size:1.02rem;
+    line-height:1.55;
+    color:rgba(255,255,255,0.82);
+    max-width:46ch;
+    margin:0 0 20px;
+  }
+  .pill-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:26px;
+  }
+  .pill-row span{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    font-size:0.72rem;
+    letter-spacing:0.02em;
+    color:#fff;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.22);
+    padding:7px 13px;
+    border-radius:30px;
+  }
+
+  .req-card{
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.16);
+    border-radius:var(--radius-lg);
+    padding:22px 22px 8px;
+    margin-bottom:22px;
+    backdrop-filter:blur(6px);
+  }
+  .req-card h3{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:1rem;
+    font-weight:600;
+    margin:0 0 14px;
+    color:#fff;
+  }
+  .req-list{ list-style:none; margin:0; padding:0; }
+  .req-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:0.93rem;
+    line-height:1.5;
+    color:rgba(255,255,255,0.86);
+    padding-bottom:14px;
+  }
+  .req-list li svg{
+    flex-shrink:0;
+    margin-top:2px;
+    width:17px;
+    height:17px;
+  }
+
+  .role-meta{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    font-size:0.86rem;
+    color:rgba(255,255,255,0.7);
+    margin-bottom:22px;
+  }
+  .role-meta b{ color:#fff; font-weight:600; }
+
+  .btn{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    border:none;
+    background:#fff;
+    color:var(--navy-900);
+    padding:15px 26px;
+    border-radius:40px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,0.18); }
+  .btn:active{ transform:translateY(0); }
+  .btn.block{ width:100%; justify-content:center; }
+  .btn.primary{ background:var(--blue); color:#fff; }
+  .btn.ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1.5px solid var(--line);
+  }
+  .btn.on-dark.ghost{ color:#fff; border-color:rgba(255,255,255,0.35); }
+  .btn:disabled{ opacity:0.4; cursor:not-allowed; transform:none !important; box-shadow:none !important; }
+
+  /* ---------- Progress ---------- */
+  .progress-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:6px 2px 18px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    font-size:0.76rem;
+    color:var(--ink-soft);
+  }
+  .progress-track{
+    flex:1;
+    height:4px;
+    background:var(--line);
+    border-radius:4px;
+    margin:0 14px;
+    overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;
+    background:linear-gradient(90deg, var(--blue), var(--blue-300));
+    border-radius:4px;
+    transition:width .3s ease;
+  }
+
+  /* ---------- Question card ---------- */
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:30px 26px 26px;
+    position:relative;
+    box-shadow:0 1px 2px rgba(10,19,48,0.04);
+  }
+  .qnum{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;
+    height:34px;
+    border-radius:10px;
+    background:linear-gradient(135deg, var(--blue), var(--navy-700));
+    color:#fff;
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:700;
+    font-size:0.85rem;
+    margin-bottom:16px;
+  }
+  .question{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:700;
+    font-size:1.4rem;
+    line-height:1.28;
+    margin:0 0 6px;
+    max-width:22ch;
+  }
+  .hint{
+    font-size:0.86rem;
+    color:var(--ink-soft);
+    margin:0 0 20px;
+    line-height:1.5;
+  }
+  .field{
+    width:100%;
+    font-family:'Inter',sans-serif;
+    font-size:1.02rem;
+    padding:14px 14px;
+    border:1.5px solid var(--line);
+    border-radius:var(--radius-sm);
+    background:var(--paper);
+    color:var(--ink);
+    outline:none;
+  }
+  .field:focus{
+    border-color:var(--blue);
+    background:#fff;
+    box-shadow:0 0 0 3px rgba(47,95,232,0.14);
+  }
+  select.field{
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2312131a'><path d='M5 7l5 6 5-6z'/></svg>");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+    padding-right:38px;
+  }
+  .error-msg{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    font-size:0.72rem;
+    color:var(--danger);
+    margin-top:9px;
+    min-height:14px;
+  }
+  .card-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:24px;
+  }
+  .nav-btn{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.9rem;
+    background:transparent;
+    border:none;
+    color:var(--ink-soft);
+    cursor:pointer;
+    padding:10px 4px;
+  }
+  .nav-btn.next{
+    color:#fff;
+    background:var(--ink);
+    padding:12px 24px;
+    border-radius:40px;
+  }
+  .nav-btn.next:hover{ background:var(--blue); }
+  .nav-btn:disabled{ opacity:0.3; cursor:not-allowed; }
+
+  .fade-enter{ animation:cardIn .26s ease both; }
+  @keyframes cardIn{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+  @media (prefers-reduced-motion:reduce){ .fade-enter{animation:none;} .btn:hover{transform:none;} }
+
+  /* ---------- Terms screen ---------- */
+  .terms-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:28px 24px;
+  }
+  .terms-card h2{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:1.35rem;
+    margin:0 0 14px;
+  }
+  .recap-list{
+    list-style:none;
+    margin:0 0 20px;
+    padding:0;
+    display:grid;
+    gap:10px;
+  }
+  .recap-list li{
+    display:flex;
+    justify-content:space-between;
+    font-size:0.9rem;
+    border-bottom:1px dashed var(--line);
+    padding-bottom:8px;
+  }
+  .recap-list li span:first-child{ color:var(--ink-soft); }
+  .recap-list li span:last-child{ font-weight:600; text-align:right; }
+
+  .check-row{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    background:var(--paper);
+    border-radius:var(--radius-sm);
+    padding:16px;
+    cursor:pointer;
+    border:1.5px solid var(--line);
+    margin-bottom:20px;
+  }
+  .check-row input{
+    margin-top:3px;
+    width:18px;
+    height:18px;
+    accent-color:var(--blue);
+    flex-shrink:0;
+  }
+  .check-row p{ margin:0; font-size:0.88rem; line-height:1.5; color:var(--ink); }
+
+  /* ---------- Review ---------- */
+  .review-title{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:700;
+    font-size:1.5rem;
+    margin:4px 0 16px;
+  }
+  .review-list{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    overflow:hidden;
+  }
+  .review-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+    padding:14px 18px;
+    border-bottom:1px solid var(--line);
+  }
+  .review-row:last-child{ border-bottom:none; }
+  .review-label{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+    font-size:0.66rem;
+    letter-spacing:0.03em;
+    color:var(--ink-soft);
+    margin-bottom:3px;
+  }
+  .review-value{ font-size:0.95rem; font-weight:500; word-break:break-word; }
+  .edit-link{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.78rem;
+    color:var(--blue);
+    background:none;
+    border:none;
+    cursor:pointer;
+    white-space:nowrap;
+    padding:0;
+  }
+  .review-actions{ margin-top:20px; display:flex; flex-direction:column; gap:10px; }
+
+  /* ---------- Status screens ---------- */
+  .status{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:16px;
+    padding:60px 10px 30px;
+  }
+  .status svg{ width:56px; height:56px; }
+  .spinner{
+    width:40px; height:40px;
+    border:3px solid var(--line);
+    border-top-color:var(--blue);
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .status h2{ font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:1.55rem; margin:0; }
+  .status p{ color:var(--ink-soft); font-size:0.95rem; max-width:320px; line-height:1.55; margin:0; }
+  .status .caveat-line{
+    font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:1.6rem;
+    color:var(--blue);
+    margin:-6px 0 0;
+  }
+
+
+  /* ---------- Shared footer ---------- */
+  .site-footer{
+    width:100%;
+    max-width:600px;
+    margin:42px auto 8px;
+    padding:22px 16px 16px;
+    text-align:center;
+    background:#fff;
+    color:var(--ink-soft);
+    border:1px solid rgba(18,19,26,.08);
+    border-radius:18px;
+    box-shadow:0 10px 28px rgba(10,19,48,.12);
+  }
+  .site-footer.dark{
+    background:#fff;
+    color:var(--ink-soft);
+    border-color:rgba(18,19,26,.08);
+  }
+  .footer-brands{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:14px;
+  }
+  .footer-brands img{
+    height:42px;
+    width:auto;
+    max-width:150px;
+    object-fit:contain;
+  }
+  .footer-brands .footer-bput{
+    width:46px;
+    height:46px;
+    border-radius:12px;
+    flex:0 0 auto;
+  }
+  .footer-x{
+    font-size:1.2rem;
+    font-weight:700;
+    opacity:.75;
+  }
+  .footer-love{
+    margin:0;
+    font-size:.88rem;
+    font-weight:600;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- Updated landing ---------- */
+  /* Simple, bold collaboration X — centered evenly between both logos */
+  .collab-x{
+    width:36px;
+    height:44px;
+    flex:0 0 36px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--navy-700);
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:32px;
+    font-weight:900;
+    line-height:1;
+  }
+  .topbar .tag{
+    font-family:"Trebuchet MS","Segoe UI",sans-serif;
+    font-size:.76rem;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .brand-x,.footer-x{font-size:0;color:var(--ink-soft);}
+  .footer-x{color:currentColor;}
+  .brand-cluster{gap:12px;}
+  .brand-cluster img{height:44px;max-width:140px;}
+  .brand-cluster .bput-mark{height:44px;width:44px;}
+  .hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;letter-spacing:-.035em;max-width:15ch;}
+  .landing-actions{display:flex;flex-direction:column;gap:10px;margin:0 0 24px;}
+  .landing-actions .btn{width:100%;justify-content:center;}
+  .job-highlights{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:9px;}
+  .job-highlights li{font-size:.92rem;color:rgba(255,255,255,.84);padding-left:18px;position:relative;}
+  .job-highlights li::before{content:"•";position:absolute;left:0;color:#8fabf7;font-size:1.1rem;line-height:1;}
+  .job-description{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-lg);padding:22px;margin:0 0 22px;}
+  .job-description h3{margin:0 0 12px;color:#fff;font-size:1.08rem;}
+  .job-description p{margin:0 0 14px;color:rgba(255,255,255,.82);font-size:.93rem;line-height:1.6;}
+  .job-description ul{margin:0;padding-left:19px;color:rgba(255,255,255,.86);font-size:.92rem;line-height:1.65;}
+  .form-footer{margin-top:26px;}
+
+  /* ---------- Tracking ---------- */
+  .track-card{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:var(--radius-lg);
+    padding:18px;
+    margin-top:14px;
+  }
+  .track-card h3{ margin:0 0 6px; color:#fff; font-size:1rem; }
+  .track-card p{ margin:0 0 12px; color:rgba(255,255,255,.75); font-size:.88rem; line-height:1.5; }
+  .track-row{ display:flex; gap:8px; }
+  .track-row input{
+    flex:1; min-width:0; border:none; border-radius:10px; padding:12px;
+    font:inherit; outline:none;
+  }
+  .track-row button{
+    border:none; border-radius:10px; padding:0 16px; font:inherit; font-weight:600;
+    background:#fff; color:var(--navy-900); cursor:pointer;
+  }
+  .track-result{
+    margin-top:10px; min-height:18px; font-size:.84rem; color:#dce7ff;
+  }
+
+  .welcome-line{
+    margin:0 0 10px;
+    color:#bcd0ff;
+    font-size:1rem;
+    line-height:1.5;
+    min-height:48px;
+  }
+  .cursor{ display:inline-block; width:2px; height:1em; background:currentColor; vertical-align:-2px; animation:blink .8s infinite; }
+  @keyframes blink{ 50%{opacity:0;} }
+
+  /* ---------- Combined links ---------- */
+  .link-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .link-grid .field{ min-width:0; }
+  @media (max-width:480px){ .link-grid{grid-template-columns:1fr;} }
+
+  .application-number{
+    display:inline-block;
+    background:#eef3ff;
+    color:var(--blue);
+    border:1px solid #cfdcff;
+    border-radius:12px;
+    padding:12px 16px;
+    font-weight:700;
+    letter-spacing:.04em;
+    margin:2px 0 4px;
+  }
+
+  .hidden{ display:none !important; }
+
+  @media (min-width:480px){
+    .hero h1{ font-size:2.7rem; max-width:13ch; }
+    .card{ padding:36px 32px 30px; }
+  }
+
+  /* ---------- Refined landing design ---------- */
+  .brand-cluster{gap:14px;}
+  .brand-cluster img{height:48px; max-width:150px;}
+  .brand-cluster .bput-mark{height:48px;width:48px;}
+  .collab-x{width:34px;height:48px;display:flex;align-items:center;justify-content:center;position:relative;flex:0 0 34px;}
+  .collab-x::before,.collab-x::after{content:"";position:absolute;width:30px;height:3px;background:linear-gradient(90deg,#8fabf7,#fff);border-radius:10px;transform:rotate(45deg);box-shadow:0 0 12px rgba(143,171,247,.35);}
+  .collab-x::after{width:18px;transform:rotate(-45deg);background:#fff;}
+  .hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;letter-spacing:-.035em;max-width:15ch;font-size:2.65rem;}
+  .hero-top-actions{display:flex;flex-direction:column;gap:10px;margin:18px 0 26px;max-width:320px;}
+  .hero-top-actions .btn{width:100%;justify-content:center;}
+  .pill-row{display:block;margin:0 0 24px;padding:0;}
+  .pill-row span{display:block;background:none;border:none;padding:5px 0 5px 18px;border-radius:0;position:relative;font-family:inherit;font-size:.95rem;letter-spacing:0;color:rgba(255,255,255,.9);}
+  .pill-row span::before{content:"•";position:absolute;left:0;color:#8fabf7;font-size:1.2em;line-height:1;}
+  .jd-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-lg);padding:22px;margin-bottom:18px;backdrop-filter:blur(6px);}
+  .jd-card h3{margin:0 0 14px;color:#fff;font-size:1.08rem;}
+  .jd-list{margin:0;padding-left:19px;color:rgba(255,255,255,.86);}
+  .jd-list li{padding:0 0 10px;line-height:1.55;font-size:.93rem;}
+  .availability{display:inline-flex;align-items:center;gap:8px;margin:2px 0 22px;font-size:.9rem;color:#dce7ff;}
+  .availability::before{content:"";width:8px;height:8px;border-radius:50%;background:#74e3a8;box-shadow:0 0 0 4px rgba(116,227,168,.13);}
+  .form-footer{margin-top:26px;}
+  .form-footer .footer-brands img{height:30px;max-width:110px;}
+  .form-footer .footer-bput{width:32px;height:32px;}
+  .form-footer .footer-love{font-size:.78rem;}
+
+  /* ---------- Google Sheet application tracking ---------- */
+  .track-page{padding-top:26px;}
+  .track-page h1{max-width:16ch;}
+  .track-panel{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px;margin-top:18px;backdrop-filter:blur(8px);}
+  .track-panel label{display:block;color:#dce7ff;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:9px;}
+  .track-input-row{display:flex;gap:10px;}
+  .track-input-row input{flex:1;min-width:0;border:none;border-radius:12px;padding:14px;font:inherit;outline:none;}
+  .track-input-row button{border:none;border-radius:12px;padding:0 18px;font:inherit;font-weight:700;background:#fff;color:var(--navy-900);cursor:pointer;}
+  .track-message{margin:14px 0 0;color:#dce7ff;font-size:.9rem;line-height:1.5;min-height:20px;}
+  .track-result-card{margin-top:16px;background:#fff;color:var(--ink);border-radius:18px;padding:18px;display:none;}
+  .track-result-card.show{display:block;}
+  .track-status{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;background:#eef3ff;color:var(--blue);font-size:.8rem;font-weight:800;margin-bottom:14px;}
+  .track-details{display:grid;gap:11px;}
+  .track-detail{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:10px;font-size:.9rem;}
+  .track-detail:last-child{border-bottom:none;padding-bottom:0;}
+  .track-detail span:first-child{color:var(--ink-soft);}
+  .track-detail span:last-child{font-weight:700;text-align:right;}
+  @media(max-width:480px){.track-input-row{flex-direction:column}.track-input-row button{height:48px}.track-detail{align-items:flex-start;flex-direction:column;gap:3px}.track-detail span:last-child{text-align:left;}}
+
+  /* ---------- Tracking page contrast fix ---------- */
+  .track-page{
+    color:#fff;
+    padding-top:38px;
+  }
+  .track-page .eyebrow-script{
+    color:#b9ceff;
+    font-weight:700;
+    text-shadow:0 1px 12px rgba(0,0,0,.18);
+  }
+  .track-page h1{
+    color:#fff;
+    text-shadow:0 3px 18px rgba(0,0,0,.16);
+  }
+  .track-page .sub{
+    color:rgba(255,255,255,.88);
+    font-weight:500;
+  }
+  .track-panel{
+    background:rgba(8,18,48,.28);
+    border-color:rgba(255,255,255,.24);
+    box-shadow:0 18px 40px rgba(0,0,0,.14);
+  }
+  .track-panel label{
+    color:#e9f0ff;
+  }
+  .track-message{
+    color:#eef4ff;
+    font-weight:600;
+  }
+  #homeBtn{
+    color:#fff;
+    border-color:rgba(255,255,255,.52);
+    background:rgba(255,255,255,.06);
+    font-weight:700;
+  }
+  #homeBtn:hover{
+    background:#fff;
+    color:var(--navy-900);
+  }
+
+</style>
+</head>
+<body class="on-landing" id="body">
+
+<div class="topbar-wrap">
+  <div class="topbar">
+    <div class="brand-cluster">
+      <img src="student-corner-logo.png" alt="Student Corner">
+      <span class="collab-x" aria-label="Student Corner and BPUT Notes collaboration">×</span>
+      <svg class="bput-mark" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="16" fill="#2f5fe8"></rect><path d="M18 46V18h15c3.5 0 6.2.9 8 2.7 1.8 1.7 2.7 3.8 2.7 6.3 0 1.7-.5 3.2-1.5 4.4-.9 1.1-2 1.8-3.2 2.2 1.7.3 3 1.2 4 2.5 1 1.3 1.5 2.9 1.5 4.8 0 2.9-1 5.1-3 6.7-2 1.6-4.8 2.4-8.5 2.4H18zm6.2-17h8.3c1.9 0 3.3-.5 4.2-1.3.9-.8 1.4-1.9 1.4-3.2 0-1.4-.5-2.5-1.4-3.2-.9-.8-2.3-1.2-4.1-1.2h-8.4v8.9zm0 12h9.2c2 0 3.5-.5 4.5-1.5 1-.9 1.5-2.2 1.5-3.7s-.5-2.8-1.5-3.7c-1-1-2.5-1.4-4.5-1.4h-9.2v10.3z" fill="white"></path></svg>
+    </div>
+    <span class="tag" id="topbarTag">Hiring together</span>
+  </div>
+</div>
+
+<div class="stage-outer">
+  <div class="stage" id="stage"></div>
+</div>
+
+<script>
+(function(){
+
+  // Paste your deployed Google Apps Script Web App URL here.
+  // Example: https://script.google.com/macros/s/XXXXXXXXXXXX/exec
+  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxVAutJoKkv74OJjG2LiEigZJxCHQBMtRo_ia39jnPg7bGsjzPuB5QlRk2SaMR6JSBBRA/exec";
+
+  var FIELDS = [
+    { id:"name", label:"What's your full name?", hint:"As per your college ID or records.", type:"text", placeholder:"e.g. Ananya Mohapatra" },
+    { id:"semester", label:"Which semester are you in?", hint:"Your current semester of B.Tech.", type:"select",
+      options:["1st Semester","2nd Semester","3rd Semester","4th Semester","5th Semester","6th Semester","7th Semester","8th Semester"] },
+    { id:"department", label:"Which department or branch?", hint:"e.g. Computer Science and Engineering.", type:"text", placeholder:"Department / branch" },
+    { id:"college", label:"Which college do you study at?", hint:"Full name of your institution.", type:"text", placeholder:"College name" },
+    { id:"regNo", label:"What's your registration number?", hint:"As issued by your university.", type:"text", placeholder:"Registration number" },
+    { id:"mobile", label:"Best number to reach you on?", hint:"A 10-digit mobile number, ideally on WhatsApp.", type:"tel", placeholder:"10-digit mobile number" },
+    { id:"email", label:"What's your email address?", hint:"Interview and offer updates go here.", type:"email", placeholder:"you@example.com" },
+    { id:"linkedin", label:"Share your LinkedIn profile.", hint:"Paste your full profile link.", type:"url", placeholder:"https://linkedin.com/in/you" },
+    { id:"github", label:"Share your GitHub profile.", hint:"Where we can see your code.", type:"url", placeholder:"https://github.com/you" },
+    { id:"projectLinks", label:"Share your project links.", hint:"Add both the live project link and the GitHub repository link together.", type:"combined" }
+  ];
+
+  var state = { screen:"landing", qIndex:0, answers:{}, agreed:false, applicationNumber:"" };
+  var stage = document.getElementById("stage");
+  var body = document.getElementById("body");
+  var topbarTag = document.getElementById("topbarTag");
+
+  function esc(s){
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+      return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c];
+    });
+  }
+
+  function validate(field, value){
+    var v = (value || "").trim();
+    if(!v) return "This one can't be left blank.";
+    if(field.id === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return "Enter a valid email address.";
+    if(field.id === "mobile" && !/^[6-9]\d{9}$/.test(v)) return "Enter a valid 10-digit mobile number.";
+    if(field.id === "linkedin" && !/^https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/.+/i.test(v)) return "Enter a full linkedin.com profile URL.";
+    if(field.id === "github" && !/^https?:\/\/(www\.)?github\.com\/[^\/\s]+\/?$/i.test(v)) return "Enter a full github.com profile URL.";
+    if(field.id === "projectRepo" && !/^https?:\/\/(www\.)?github\.com\/.+/i.test(v)) return "Enter a github.com repository URL.";
+    if(field.id === "projectLive" && !/^https?:\/\/[^\s]+\.[^\s]+/i.test(v)) return "Enter a valid live URL, starting with https://";
+    return "";
+  }
+
+  function setBodyBg(){
+    var darkScreen = state.screen === "landing" || state.screen === "track";
+    body.classList.toggle("on-landing", darkScreen);
+
+    if(state.screen === "landing"){
+      topbarTag.textContent = "Hiring together";
+    } else if(state.screen === "track"){
+      topbarTag.textContent = "Track application";
+    } else {
+      topbarTag.textContent = "Frontend Intern application";
+    }
+  }
+
+  function render(){
+    setBodyBg();
+    stage.innerHTML = "";
+    if(state.screen === "landing") return renderLanding();
+    if(state.screen === "track") return renderTrack();
+    if(state.screen === "question") return renderQuestion();
+    if(state.screen === "terms") return renderTerms();
+    if(state.screen === "review") return renderReview();
+    if(state.screen === "submitting") return renderSubmitting();
+    if(state.screen === "success") return renderSuccess();
+    if(state.screen === "failure") return renderFailure();
+  }
+
+  function renderLanding(){
+    var el = document.createElement("div");
+    el.className = "hero fade-enter";
+    el.innerHTML =
+      '<p class="eyebrow-script">Student Corner × BPUT Notes</p>' +
+      '<p class="welcome-line"><span id="typedWelcome"></span><span class="cursor"></span></p>' +
+      '<h1>Frontend Developer Intern</h1>' +
+      '<p class="sub">We are looking for a passionate frontend developer intern to work on real projects that students actually use, not busywork.</p>' +
+      '<div class="hero-top-actions"><button class="btn on-dark ghost" id="trackBtn">Track application</button><button class="btn primary" id="startBtn">Apply now →</button></div>' +
+      '<div class="pill-row"><span>Paid internship</span><span>1 position available right now</span><span>~6 hrs / week</span></div>' +
+      '<div class="jd-card">' +
+        '<h3>Job Description</h3>' +
+        '<ul class="req-list">' +
+          reqItem("2nd or 3rd year B.Tech student, any branch") +
+          reqItem("Hands-on experience with React.js, CSS, animations and styling libraries") +
+          reqItem("A couple of projects that show off your frontend skills") +
+          reqItem("Comfort using AI coding tools like ChatGPT and Claude") +
+          reqItem("Your own laptop, and can work independently as well as in a team") +
+          reqItem("Free for roughly 6 hours a week") +
+        "</ul>" +
+      "</div>" +
+      '<div class="jd-card"><h3>What you will do</h3><ul class="jd-list"><li>Build and improve responsive React.js interfaces for real student-facing products.</li><li>Create polished interactions, animations and modern UI experiences using CSS and JavaScript libraries.</li><li>Turn ideas and designs into clean, reusable frontend components.</li><li>Work with the team, use AI coding agents productively and ship improvements independently.</li></ul></div>' +
+      '<div class="availability">1 position available right now</div>' +
+      '<div class="role-meta"><span>Type: <b>Paid Internship</b></span><span>Commitment: <b>~6 hrs/week</b></span></div>' +
+      '<div class="site-footer dark">' + footerHtml() + '</div>';
+    stage.appendChild(el);
+    typeWelcome("Welcome to Career Applications Portal of bputnotes.in");
+    document.getElementById("startBtn").addEventListener("click", function(){
+      state.screen = "question";
+      state.qIndex = 0;
+      render();
+    });
+    document.getElementById("trackBtn").addEventListener("click", function(){
+      state.screen = "track";
+      render();
+    });
+  }
+
+  function typeWelcome(message){
+    var target = document.getElementById("typedWelcome");
+    var i = 0;
+    function type(){
+      if(!target || i > message.length) return;
+      target.textContent = message.slice(0, i++);
+      setTimeout(type, 24);
+    }
+    type();
+  }
+
+  function footerHtml(){
+    return '<div class="footer-brands">' +
+      '<img src="student-corner-logo.png" alt="Student Corner logo" onerror="this.style.display=\'none\'">' +
+      '<span class="collab-x" aria-hidden="true">×</span>' +
+      '<svg class="footer-bput" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#2f5fe8"/><path d="M18 46V18h15c3.5 0 6.2.9 8 2.7 1.8 1.7 2.7 3.8 2.7 6.3 0 1.7-.5 3.2-1.5 4.4-.9 1.1-2 1.8-3.2 2.2 1.7.3 3 1.2 4 2.5 1 1.3 1.5 2.9 1.5 4.8 0 2.9-1 5.1-3 6.7-2 1.6-4.8 2.4-8.5 2.4H18zm6.2-17h8.3c1.9 0 3.3-.5 4.2-1.3.9-.8 1.4-1.9 1.4-3.2 0-1.4-.5-2.5-1.4-3.2-.9-.8-2.3-1.2-4.1-1.2h-8.4v8.9zm0 12h9.2c2 0 3.5-.5 4.5-1.5 1-.9 1.5-2.2 1.5-3.7s-.5-2.8-1.5-3.7c-1-1-2.5-1.4-4.5-1.4h-9.2v10.3z" fill="white"/></svg>' +
+      '</div><p class="footer-love">Crafted with love ❤️ by studio.bputnotes.in</p>';
+  }
+
+  function renderTrack(){
+    var el = document.createElement("div");
+    el.className = "hero track-page fade-enter";
+    el.innerHTML =
+      '<p class="eyebrow-script">Application portal</p>' +
+      '<h1>Track your application</h1>' +
+      '<p class="sub">Enter your application ID and we will fetch the latest status directly from our application system.</p>' +
+      '<div class="track-panel">' +
+        '<label for="trackInput">Application ID</label>' +
+        '<div class="track-input-row"><input id="trackInput" autocomplete="off" placeholder="e.g. BPUT-2026-0001"><button id="checkTrackBtn">Check status</button></div>' +
+        '<p class="track-message" id="trackMessage"></p>' +
+        '<div class="track-result-card" id="trackResultCard">' +
+          '<div class="track-status" id="trackStatus"></div>' +
+          '<div class="track-details">' +
+            '<div class="track-detail"><span>Applicant</span><span id="trackName"></span></div>' +
+            '<div class="track-detail"><span>Position</span><span id="trackPosition"></span></div>' +
+            '<div class="track-detail"><span>Application ID</span><span id="trackId"></span></div>' +
+            '<div class="track-detail"><span>Submitted</span><span id="trackDate"></span></div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<button class="btn on-dark ghost block" id="homeBtn" style="margin-top:16px;">← Back to home</button>' +
+      '<div class="site-footer dark">' + footerHtml() + '</div>';
+    stage.appendChild(el);
+
+    function checkStatus(){
+      var id = document.getElementById("trackInput").value.trim().toUpperCase();
+      var msg = document.getElementById("trackMessage");
+      var card = document.getElementById("trackResultCard");
+      if(!id){ msg.textContent = "Please enter your application ID."; card.classList.remove("show"); return; }
+      if(!SCRIPT_URL || SCRIPT_URL.indexOf("PASTE_YOUR") !== -1){ msg.textContent = "Application tracking is not configured yet."; return; }
+      msg.textContent = "Checking your latest application status…";
+      card.classList.remove("show");
+      fetch(SCRIPT_URL + "?action=track&applicationId=" + encodeURIComponent(id))
+        .then(function(res){ if(!res.ok) throw new Error("Request failed"); return res.json(); })
+        .then(function(data){
+          if(!data || data.status !== "success"){ msg.textContent = (data && data.message) || "No application was found with this ID."; return; }
+          msg.textContent = "Application found.";
+          document.getElementById("trackStatus").textContent = data.application.status || "Submitted";
+          document.getElementById("trackName").textContent = data.application.name || "—";
+          document.getElementById("trackPosition").textContent = data.application.position || "Frontend Developer Intern";
+          document.getElementById("trackId").textContent = data.application.applicationId || id;
+          document.getElementById("trackDate").textContent = data.application.submittedAt || "—";
+          card.classList.add("show");
+        })
+        .catch(function(){ msg.textContent = "Could not connect to the application server. Please try again."; });
+    }
+    document.getElementById("checkTrackBtn").addEventListener("click", checkStatus);
+    document.getElementById("trackInput").addEventListener("keydown", function(e){ if(e.key === "Enter") checkStatus(); });
+    document.getElementById("homeBtn").addEventListener("click", function(){ state.screen="landing"; render(); });
+  }
+
+  function reqItem(text){
+    return '<li><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#8fabf7" stroke-width="1.4"/><path d="M6 10.3l2.6 2.6L14.5 7" stroke="#8fabf7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>' + esc(text) + "</span></li>";
+  }
+
+  var TOTAL_STEPS = FIELDS.length + 1; // +1 for the terms step
+
+  function renderProgress(stepIndex){
+    var wrap = document.createElement("div");
+    wrap.className = "progress-head";
+    var pct = Math.round(((stepIndex+1) / TOTAL_STEPS) * 100);
+    wrap.innerHTML =
+      '<span>' + String(stepIndex+1).padStart(2,"0") + " / " + String(TOTAL_STEPS).padStart(2,"0") + "</span>" +
+      '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
+      '<span>' + pct + "%</span>";
+    return wrap;
+  }
+
+  function renderQuestion(){
+    var field = FIELDS[state.qIndex];
+    var container = document.createElement("div");
+    container.appendChild(renderProgress(state.qIndex));
+
+    var card = document.createElement("div");
+    card.className = "card fade-enter";
+
+    var existing = state.answers[field.id] || "";
+    var inputHtml;
+    if(field.type === "select"){
+      inputHtml = '<select class="field" id="answerInput">' +
+        '<option value="" ' + (existing ? "" : "selected") + ' disabled>Choose one</option>' +
+        field.options.map(function(o){ return '<option value="'+esc(o)+'" '+(existing===o?"selected":"")+'>'+esc(o)+'</option>'; }).join("") + "</select>";
+    } else if(field.type === "combined"){
+      var links = existing || {};
+      inputHtml = '<div class="link-grid"><input class="field" id="liveInput" type="url" placeholder="Live project URL" value="'+esc(links.live||'')+'"><input class="field" id="repoInput" type="url" placeholder="GitHub repository URL" value="'+esc(links.repo||'')+'"></div>';
+    } else {
+      inputHtml = '<input class="field" id="answerInput" type="'+field.type+'" placeholder="'+esc(field.placeholder)+'" value="'+esc(existing)+'" autocomplete="off">';
+    }
+
+    card.innerHTML =
+      '<span class="qnum">' + String(state.qIndex+1).padStart(2,"0") + "</span>" +
+      '<h2 class="question">' + esc(field.label) + "</h2>" +
+      '<p class="hint">' + esc(field.hint) + "</p>" +
+      inputHtml +
+      '<p class="error-msg" id="errorMsg"></p>' +
+      '<div class="card-nav">' +
+        '<button class="nav-btn back" id="backBtn">← Back</button>' +
+        '<button class="nav-btn next" id="nextBtn">Next</button>' +
+      "</div>";
+
+    container.appendChild(card);
+    var formFooter = document.createElement("div"); formFooter.className="site-footer form-footer"; formFooter.innerHTML=footerHtml(); container.appendChild(formFooter);
+    stage.appendChild(container);
+
+    var input = document.getElementById("answerInput");
+    if(input) input.focus();
+    var liveInput = document.getElementById("liveInput");
+    var repoInput = document.getElementById("repoInput");
+    if(liveInput) liveInput.focus();
+
+    document.getElementById("backBtn").addEventListener("click", function(){
+      if(state.qIndex === 0){ state.screen = "landing"; }
+      else { state.qIndex -= 1; }
+      render();
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", function(){
+      var value;
+      var err = "";
+      if(field.type === "combined"){
+        var live = (liveInput.value || "").trim();
+        var repo = (repoInput.value || "").trim();
+        if(!/^https?:\/\/[^\s]+\.[^\s]+/i.test(live)) err = "Enter a valid live project URL.";
+        else if(!/^https?:\/\/(www\.)?github\.com\/.+/i.test(repo)) err = "Enter a valid GitHub repository URL.";
+        value = { live:live, repo:repo };
+      } else {
+        value = input.value;
+        err = validate(field, value);
+      }
+      if(err){
+        document.getElementById("errorMsg").textContent = err;
+        if(input) input.style.borderColor = "var(--danger)";
+        if(liveInput) liveInput.style.borderColor = "var(--danger)";
+        if(repoInput) repoInput.style.borderColor = "var(--danger)";
+        return;
+      }
+      state.answers[field.id] = field.type === "combined" ? value : value.trim();
+      if(state.qIndex === FIELDS.length-1){ state.screen = "terms"; }
+      else { state.qIndex += 1; }
+      render();
+    });
+
+    if(input){
+      input.addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); document.getElementById("nextBtn").click(); } });
+      input.addEventListener("input", function(){ document.getElementById("errorMsg").textContent = ""; input.style.borderColor = "var(--line)"; });
+    }
+    [liveInput, repoInput].filter(Boolean).forEach(function(elm){
+      elm.addEventListener("input", function(){ document.getElementById("errorMsg").textContent = ""; elm.style.borderColor = "var(--line)"; });
+    });
+  }
+
+  function renderTerms(){
+    var container = document.createElement("div");
+    container.appendChild(renderProgress(FIELDS.length));
+
+    var card = document.createElement("div");
+    card.className = "terms-card fade-enter";
+    card.innerHTML =
+      "<h2>Last thing — confirm and agree</h2>" +
+      '<ul class="recap-list">' +
+        recapRow("Applicant", state.answers.name) +
+        recapRow("College", state.answers.college) +
+        recapRow("Semester", state.answers.semester) +
+      "</ul>" +
+      '<label class="check-row" id="checkRow">' +
+        '<input type="checkbox" id="agreeBox">' +
+        "<p>I confirm I'm a 2nd or 3rd-year B.Tech student able to commit approximately 6 hours a week, and I agree to be contacted by Student Corner and BPUT Notes about this paid internship.</p>" +
+      "</label>" +
+      '<div class="card-nav">' +
+        '<button class="nav-btn back" id="backBtn">← Back</button>' +
+        '<button class="nav-btn next" id="nextBtn" disabled>Review application</button>' +
+      "</div>";
+    container.appendChild(card);
+    var termsFooter = document.createElement("div"); termsFooter.className="site-footer form-footer"; termsFooter.innerHTML=footerHtml(); container.appendChild(termsFooter);
+    stage.appendChild(container);
+
+    var box = document.getElementById("agreeBox");
+    var next = document.getElementById("nextBtn");
+    box.checked = state.agreed;
+    next.disabled = !state.agreed;
+
+    box.addEventListener("change", function(){
+      state.agreed = box.checked;
+      next.disabled = !box.checked;
+    });
+    document.getElementById("backBtn").addEventListener("click", function(){
+      state.qIndex = FIELDS.length - 1;
+      state.screen = "question";
+      render();
+    });
+    next.addEventListener("click", function(){
+      if(!state.agreed) return;
+      state.screen = "review";
+      render();
+    });
+  }
+
+  function recapRow(label, value){
+    return "<li><span>" + esc(label) + "</span><span>" + esc(value || "—") + "</span></li>";
+  }
+
+  function renderReview(){
+    var wrap = document.createElement("div");
+    wrap.className = "fade-enter";
+
+    var title = document.createElement("h2");
+    title.className = "review-title";
+    title.textContent = "Review your application";
+    wrap.appendChild(title);
+
+    var list = document.createElement("div");
+    list.className = "review-list";
+
+    FIELDS.forEach(function(field, idx){
+      var row = document.createElement("div");
+      row.className = "review-row";
+      row.innerHTML =
+        "<div><div class=\"review-label\">" + esc(field.label.replace("?","")) + "</div>" +
+         "<div class=\"review-value\">" + esc(field.type === "combined" ? ((state.answers[field.id]||{}).live + " | " + (state.answers[field.id]||{}).repo) : state.answers[field.id]) + "</div></div>" +
+        '<button class="edit-link" data-idx="'+idx+'">Edit</button>';
+      list.appendChild(row);
+    });
+    wrap.appendChild(list);
+
+    var actions = document.createElement("div");
+    actions.className = "review-actions";
+    actions.innerHTML =
+      '<button class="btn primary block" id="submitBtn">Submit application</button>' +
+      '<button class="btn ghost block" id="backReviewBtn">Back</button>';
+    wrap.appendChild(actions);
+    var reviewFooter = document.createElement("div"); reviewFooter.className="site-footer form-footer"; reviewFooter.innerHTML=footerHtml(); wrap.appendChild(reviewFooter);
+    stage.appendChild(wrap);
+
+    list.querySelectorAll(".edit-link").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        state.qIndex = parseInt(btn.getAttribute("data-idx"), 10);
+        state.screen = "question";
+        render();
+      });
+    });
+    document.getElementById("backReviewBtn").addEventListener("click", function(){
+      state.screen = "terms";
+      render();
+    });
+    document.getElementById("submitBtn").addEventListener("click", function(){
+      state.screen = "submitting";
+      render();
+      submitApplication();
+    });
+  }
+
+  function renderSubmitting(){
+    var el = document.createElement("div");
+    el.className = "status fade-enter";
+    el.innerHTML =
+      '<div class="spinner"></div>' +
+      "<h2>Sending your application</h2>" +
+      "<p>Hang tight, this only takes a second.</p>";
+    stage.appendChild(el);
+  }
+
+  function renderSuccess(){
+    var el = document.createElement("div");
+    el.className = "status fade-enter";
+    el.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="#1a8354" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      "<h2>Application submitted successfully!</h2>" +
+      "<p>Thanks for applying, " + esc((state.answers.name||"").split(" ")[0] || "there") + ". Save your application number to track your application later.</p>" +
+      '<div class="application-number">' + esc(state.applicationNumber) + '</div>' +
+      "<p>We will email you at " + esc(state.answers.email) + " if you are shortlisted for the next round.</p>" +
+      '<button class="btn primary" id="successTrackBtn">Track application</button>' +
+      '<p class="caveat-line">See you soon!</p>' +
+      '<div class="site-footer">' + footerHtml() + '</div>';
+    stage.appendChild(el);
+    var successTrackBtn = document.getElementById("successTrackBtn");
+    if(successTrackBtn) successTrackBtn.addEventListener("click", function(){ state.screen="track"; render(); });
+  }
+
+  function renderFailure(){
+    var el = document.createElement("div");
+    el.className = "status fade-enter";
+    el.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="#d8372a" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9 9l6 6M15 9l-6 6" stroke-linecap="round"/></svg>' +
+      "<h2>Couldn't send that</h2>" +
+      "<p>Your application didn't go through. Check your connection and try again.</p>" +
+      '<button class="btn primary" id="retryBtn">Try again</button>' +
+      '<button class="btn ghost" id="editBtn" style="margin-top:4px;">Edit application</button>';
+    stage.appendChild(el);
+
+    document.getElementById("retryBtn").addEventListener("click", function(){
+      state.screen = "submitting";
+      render();
+      submitApplication();
+    });
+    document.getElementById("editBtn").addEventListener("click", function(){
+      state.screen = "review";
+      render();
+    });
+  }
+
+  function submitApplication(){
+    var payload = Object.assign({
+      timestamp: new Date().toISOString(),
+      agreedToTerms: state.agreed,
+      position: "Frontend Developer Intern"
+    }, state.answers);
+
+    if(!SCRIPT_URL || SCRIPT_URL.indexOf("PASTE_YOUR") !== -1){
+      state.screen = "failure";
+      render();
+      return;
+    }
+
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    })
+      .then(function(res){ if(!res.ok) throw new Error("Submission failed"); return res.json(); })
+      .then(function(json){
+        if(json && json.status === "success"){
+          state.applicationNumber = json.applicationNumber;
+          state.screen = "success";
+        } else {
+          state.screen = "failure";
+        }
+        render();
+      })
+      .catch(function(){ state.screen = "failure"; render(); });
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
